@@ -1,11 +1,12 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   background-color: hsl(203, 65%, 12%) ;
 }
 
 main{
   display: flex;
+  flex-direction: column;
   margin: 2rem;
   background-color: rgb(240, 240, 240);
   height: 400px;
@@ -16,10 +17,11 @@ main{
 }
 
 .dicebox{
-  margin: auto;
+  
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 1rem;
+  margin: auto;
 }
 
 .dice {
@@ -36,4 +38,29 @@ main{
 }
 .dice > h2{
   margin:auto;
+}
+
+.button {
+  display: flex;
+  width: 110px;
+  height: 40px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: 	hsl(248, 100%, 60%);
+  cursor: pointer;
+  margin: 3rem auto;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: azure;
+  box-shadow: 1px 1px 1px #949494;
+}
+.button > h2 {
+  margin: auto;
+}
+.button:focus {
+  outline: none;
+}
+.button:active{
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, .7)
 }
