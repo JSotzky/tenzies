@@ -13,8 +13,25 @@ main{
   width: 400px;
   border-radius: 5px;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  font-family: Inter, sans-serif;
+  
 }
+
+.title {
+  font-size: 40px;
+  margin: 1rem;
+}
+
+.instructions {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
 
 .dicebox{
   
@@ -28,7 +45,6 @@ main{
   display: flex;
   height: 50px;
   width: 50px;
-  background-color: rgb(255, 255, 255);
   border-radius: 5px;
   box-shadow: 2px 1px 3px #949494;
   font-family: Inter, sans-serif;
@@ -39,6 +55,8 @@ main{
 .dice > h2{
   margin:auto;
 }
+
+
 
 .button {
   display: flex;
@@ -51,7 +69,7 @@ main{
   margin: 3rem auto;
   font-family: Inter, sans-serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 10px;
   color: azure;
   box-shadow: 1px 1px 1px #949494;
 }
