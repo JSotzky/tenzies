@@ -11,9 +11,21 @@ const [diceNumbers, setDiceNumbers] = React.useState(allNewDice())
 
 const [tenzies, setTenzies] = React.useState(false)
 
+const [seconds, setSeconds] = React.useState(0);
+
 const buttonStyles = {
   fontSize: tenzies ? "10px" : "15px"
 }
+//This is just the clock and timer. Run on start, Stop when won and restart when new game is called.
+
+React.useEffect(() => {
+  const interval = setInterval(() => {
+      setSeconds(seconds => (seconds + 1))
+      console.log(tenzies)
+    
+  }, 1000);
+  return () => clearInterval(interval)
+}, [])
 
 React.useEffect(() => {
   //Check for win con
@@ -88,8 +100,10 @@ function unHoldAllDice(){
 
 function resetGame(){
   setTenzies(false)
+  setSeconds(0)
   unHoldAllDice()
   reRoll()
+
 }
 
 
@@ -105,6 +119,7 @@ function resetGame(){
               })}
           </div>
           <button className="button" onClick={tenzies ? resetGame : reRoll} style={buttonStyles}><h2>{tenzies ? "New Game" : "Roll"}</h2></button>
+          <div className='timer'>Seconds {seconds}</div>
       </main>
     </div>
   );
